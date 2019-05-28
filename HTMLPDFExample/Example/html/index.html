@@ -1,10 +1,6 @@
 <!doctype html>
 <head id="app" data-template-set="html5-reset">
-
 	<meta charset="utf-8">
-	
-	<title>ORDER 1008220180124172010</title>
-	
 	<meta name="author" content="Aleksandar Vacić, Radiant Tap">
 	<meta name="Copyright" content="Radiant Tap 2013. All Rights Reserved.">
 
@@ -16,8 +12,10 @@
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-	<!-- CSS: screen, mobile & print are all in the same file -->
-	<link rel="stylesheet" href="order.css">
+<!--	<link rel="stylesheet" href="order.css">-->
+    
+    
+
 	<script type="text/javascript" charset="utf-8" src="jquery.js"></script>
 <title>Testing QR code</title>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -29,35 +27,130 @@
                 $('#barcode').attr('src', url);
             }
         </script>
-    </head>
-    <body>
-        <input id="text" type="text" 
-            value="NRIC or Work Permit" style="Width:20%"
-            onblur='generateBarCode();' /> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <canvas id="myChart" width="400" height="400"></canvas>
+<script>
+    
+    var ctx = document.getElementById('myChart');
+    
+    let data =  {
+        datasets: [{
+            data: [10, 20, 30]
+        }],
 
-      <img id='barcode' 
-            src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100" 
-            alt="" 
-            title="HELLO" 
-            width="50" 
-            height="50" />
+        // These labels appear in the legend and in the tooltips when hovering different arcs
+        labels: [
+            'Red',
+            'Yellow',
+            'Blue'
+        ]
+    };
+    
+    let options = {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+    
+    var myDoughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data,
+        options: null
+    });
+</script>
+    
+    <style>
+        body {
+            background-color: white; 
+            padding: 2%;
+            font-family:"Frutiger 45 Light", sans-serif;
+            font-style: normal; 
+            font-weight: normal; 
+        }
+        h1   {color: blue;}
+        table {
+            border-collapse: collapse;
+            border: none;
+/*            width: 80%*/
+        }
+        
+        td {
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #C09979;
+            font-size: 14pt;
+        }
+        .qrCode {
+            float: right;
+            height: 115px;
+            width: 115px;
+        }
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .s1 { 
+            color: black; 
+            text-decoration: none; 
+            font-size: 115pt; 
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-direction: row;
+            padding-left: 5pt;
+            text-indent: 0pt;
+            line-height: 123pt;
+            text-align: left;
+        }
+        .s2 { color: black; font-family:"Frutiger 45 Light", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+
+    </style>
+</head>
+<body>
+    <img src="images/logo.png">
+  
+    <p class="s1">My Way.
+        <span><img width="115" height="115" alt="image" src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=150x150"/></span>
+    </p>
+    
+    
+    <p class="s2" style="padding-top: 3pt;padding-left: 11pt;text-indent: 0pt;text-align: left;">Ihr <span style=" color: #E60000;">individueller </span>Portfolio Report</p>
 
 
-<div class="wrapper">
-
-	<header class="clearfix">
-<h1><span>Order</span> 1008220180124172010</h1>
-<p class="orderdate"><span>Date</span> Jan 24, 2018</p>
-<p class="orderpage"><span>Page</span> 1 <span>of</span> 3</p>
-	</header>
-	
-<div class="pagecontent">
-
-	
-	<section class="clientheader statusdrafted">
-	
-	<img src="images/logo.png" class="logo" alt="" />
-
+    <br style = "line-height:1;">
+    <div style="width: 50%; float: right">
+    <table>
+      <tr>
+        <td>Anlagestrategie: </td>
+        <td>Ausgewogen</td>
+      </tr>
+      <tr>
+        <td>Referenzwährung: </td>
+        <td>CHF</td>
+      </tr>
+       <tr>
+        <td>Kundendomizil: </td>
+        <td>Schweiz</td>
+      </tr>
+    </table>
+    </div>
+    <br>
+    <br style = "line-height:5;">
+    <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/12/14/ubs-bank.jpg?w968" alt="Smiley face"  style="max-width: 100%; width:100%">
+      
+    
+    
+    
+    
+    
+    
+        
 	<div class="clientnumbers clearfix">
 	<p class="clientno"><span>Client No. </span> <b>13385</b></p>
 	<p class="vatno"><span>VAT No. </span> <b>SR1234567</b></p>
@@ -81,7 +174,7 @@
 		<p class="halfw"><span>Email</span> sales@logo.no.logo</p>
 	</div>
 	
-	</section>
+
 	
 	<section class="orderheader">
 
