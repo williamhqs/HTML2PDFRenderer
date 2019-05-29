@@ -78,26 +78,72 @@
             border-collapse: collapse;
             border-top: 3px solid black;
             border-bottom: 3px solid black;
-            width: 80%; 
+            width: 70%; 
             float: left;
         }
         
         .table2 td {
-            border-bottom: 2px solid black;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid black;
+            font-size: 13pt;
+        }
+        
+        .table2 th {
+            padding-top: 5px;
+            font-size: 25px;
+            text-align: left;
+            font-style: normal; 
+            font-weight: normal; 
+        }
+        
+        .table2 td:nth-child(2) {
+            text-align: right;
+        }
+        
+        .table2 td:nth-child(3) {
+            text-align: right;
         }
         
         .table3 {
-            float: left; 
-            width: 20%;
-/*
-            height: 50px; 
-            display: block;
-*/
+            border-collapse: collapse;
+            border-top: 3px solid black;
+            float: right; 
+            width: 28%;
+        }
+        
+        .table3 td {
+            border-bottom: none;
+            font-size: 13pt;
+        }
+        
+        .table3 th {
+            padding-top: 5px;
+            font-size: 25px;
+            text-align: left;
+            font-style: normal; 
+            font-weight: normal; 
+            padding-bottom: 10px;
+        }
+        
+        .dot {
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: aqua;
+            float: left;
+            vertical-align: bottom;
+            padding: 5px 5px;
+        }
+        
+        .dotText {
+            padding-left: 30px;
         }
         
     </style>
 </head>
 <body>
+
     <img src="images/logo.png">
   
     <p class="s1">My Way.
@@ -130,7 +176,7 @@
     <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/12/14/ubs-bank.jpg?w968" alt="Smiley face"  style="max-width: 100%; width:100%">
     
     
-    <header style = "clear:left">
+    <header style = "font-size: 30pt; font-weight: normal;">
         <p> Portfolioanalyse </p>
     </header>
     <div>
@@ -140,160 +186,224 @@
         </tr>
         <tr>
             <td style="border-bottom: 2px solid #ddd"></td>
-            <td style="border-bottom: 2px solid #ddd">YTD 2019 </td>
-            <td style="border-bottom: 2px solid #ddd">2018</td>
+            <td style="border-bottom: 2px solid #ddd; font-style: italic">YTD 2019 </td>
+            <td style="border-bottom: 2px solid #ddd; font-style: italic">2018</td>
         </tr>
         <tr>
           <td style="border-bottom: 2px solid #ddd">Portfolio Rendite</td>
           <td style="border-bottom: 2px solid #ddd">+3.7%</td>
-          <td style="border-bottom: 2px solid #ddd">n.a.</td>
+          <td style="border-bottom: 2px solid #ddd;">n.a.</td>
         </tr>
             
         <tr>
-            <td colspan="3" style="border-bottom: none">Die Portfolio Rendite wird netto nach Abzug von Verwaltungs- und Depotgebühren angegeben. <br><br>
+            <td colspan="3" style="border-bottom: none; font-size: 12pt; color: #676767;">Die Portfolio Rendite wird netto nach Abzug von Verwaltungs- und Depotgebühren angegeben. <br><br>
             YTD (Year-to-date) bezeichnet den Zeitraum seit Beginn des Jahres bis zum aktuellen Zeitpunkt.</td>
         </tr>
         <tr>
-            <td style="height:50px; border-bottom: none" colspan="3"></td>
+            <td style="height:20px; border-bottom: none" colspan="3"></td>
+        </tr>
+        <tr style="font-style: italic">
+            <td>Historische Rendite der Anlagemodule</td>
+            <td>YTD 2019</td>
+            <td>2018</td>   
+        </tr>
+       <tr>
+            <td>
+                <div>
+                <div class="dot" style="background: #A1CCE4"></div>
+                <div class="dotText">Liquidität</div>
+                </div>
+            </td>
+            <td>0.0%</td>
+            <td>0.0%</td>   
         </tr>
         <tr>
+            <td><div class="dot" style="background: #4C3C2F"></div><div class="dotText">Globale Anleihen</div></td>
+            <td>+0.0%</td>
+            <td>-0.3%</td>   
+        </tr>
+        <tr>
+            <td><div class="dot" style="background: #4C3C2F"></div><div class="dotText">Grüne Anleihen</div></td>
+            <td>+0.6%</td>
+            <td>+2.4%</td>   
+        </tr>
+        <tr>
+            <td><div class="dot" style="background: #C07155"></div><div class="dotText">Steueroptimierte Schweizer Aktien</div></td>
+            <td>+0.2%</td>
+            <td>+0.9%</td>   
+        </tr>
+        <tr>
+            <td><div class="dot" style="background: #C07155"></div><div class="dotText">Globale Einzelaktien</div></td>
+            <td>+2.6%</td>
+            <td>+0.2%</td>   
+        </tr>
+        <tr>
+            <td><div class="dot" style="background: #C07155"></div><div class="dotText">Passive Währungsabgesicherte Globale Aktien</div></td>
+            <td>+2.4%</td>
+            <td>+0.1%</td>   
+        </tr>
+        <tr>
+            <td><div class="dot" style="background: #AEB0B3"></div><div class="dotText">Rohstoffe</div></td>
+            <td>-0.1%</td>
+            <td>+1.6%</td>   
+        </tr>
+        <tr>
+            <td style="border-bottom: none; font-size: 12pt; color: #676767" colspan="3">
+Die historische Rendite der Anlagemodule bietet einen Anhaltspunkt bezüglich der Wertentwicklung und ist und wird unabhängig von der erwarteten Portfolio Rendite angegeben.</td>
+        </tr>
+        <tr>
+            <td style="height: 20px; border-bottom: none;" colspan="3"></td>
+        </tr>
+      </table>
+        
+    <table class="table3">
+        <tr>
+          <th colspan="3">Portfolio-Struktur</th>
+        </tr>
+        <tr style="font-style: italic; text-align: center; border-bottom: 2px solid #ddd">
+          <td>Anlageklasse</td>
+          <td>Währung</td>
+        </tr>
+        <tr>
+            
+            <td>
+                <canvas id="myChart" width="150px" height="150px" style="">
+                </canvas>
+            </td>
+          <td><canvas id="myChart1" width="150px" height="150px" style=""></canvas></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size: 12pt;">Die Aufteilung entspricht der Auswahl des Kunden bei Vertragsabschluss. Die aktuelle Aufteilung im Kundenportfolio kann von dieser Gewichtung aufgrund von Marktbewegungen abweichen.</td>
+        </tr>
+      </table>
+    </div>
+    
+   
+    <div>
+       <table class="table2" style="border-top: none;">
+        <tr>
+          <th colspan="3" style= "padding-top: 15px;">Risiko</th>
+        </tr>
+        <tr>
+            <td style="border-bottom: 2px solid #ddd"></td>
+            <td style="border-bottom: 2px solid #ddd; font-style: italic">YTD 2019 </td>
+            <td style="border-bottom: 2px solid #ddd; font-style: italic">2018</td>
+        </tr>
+        <tr>
+          <td style="border-bottom: 2px solid #ddd">Portfolio Volatilität</td>
+          <td style="border-bottom: 2px solid #ddd">+3.7%</td>
+          <td style="border-bottom: 2px solid #ddd;">n.a.</td>
+        </tr>
+            
+        <tr>
+            <td colspan="3" style="border-bottom: none; font-size: 12pt; color: #676767;">Die Portfolio Rendite wird netto nach Abzug von Verwaltungs- und Depotgebühren angegeben. <br><br>
+            YTD (Year-to-date) bezeichnet den Zeitraum seit Beginn des Jahres bis zum aktuellen Zeitpunkt.</td>
+        </tr>
+        <tr>
+            <td style="height:20px; border-bottom: none" colspan="3"></td>
+        </tr>
+        <tr style="font-style: italic">
             <td>Historische Rendite der Anlagemodule</td>
             <td>YTD 2019</td>
             <td>2018</td>   
         </tr>
         <tr>
-            <td>Liquidität</td>
+            <td>
+                <div>
+                <div class="dot" style="background: #A1CCE4"></div>
+                <div class="dotText">Liquidität</div>
+                </div>
+            </td>
             <td>0.0%</td>
             <td>0.0%</td>   
         </tr>
         <tr>
-            <td>Globale Anleihen</td>
+            <td><div class="dot" style="background: #4C3C2F"></div><div class="dotText">Globale Anleihen</div></td>
             <td>+0.0%</td>
             <td>-0.3%</td>   
         </tr>
         <tr>
-            <td>Grüne Anleihen</td>
+            <td><div class="dot" style="background: #4C3C2F"></div><div class="dotText">Grüne Anleihen</div></td>
             <td>+0.6%</td>
             <td>+2.4%</td>   
         </tr>
         <tr>
-            <td>Steueroptimierte Schweizer Aktien</td>
+            <td><div class="dot" style="background: #C07155"></div><div class="dotText">Steueroptimierte Schweizer Aktien</div></td>
             <td>+0.2%</td>
             <td>+0.9%</td>   
         </tr>
         <tr>
-            <td>Globale Einzelaktien</td>
+            <td><div class="dot" style="background: #C07155"></div><div class="dotText">Globale Einzelaktien</div></td>
             <td>+2.6%</td>
             <td>+0.2%</td>   
         </tr>
         <tr>
-            <td>Passive Währungsabgesicherte Globale Aktien</td>
+            <td><div class="dot" style="background: #C07155"></div><div class="dotText">Passive Währungsabgesicherte Globale Aktien</div></td>
             <td>+2.4%</td>
             <td>+0.1%</td>   
         </tr>
         <tr>
-            <td>Rohstoffe</td>
+            <td><div class="dot" style="background: #AEB0B3"></div><div class="dotText">Rohstoffe</div></td>
             <td>-0.1%</td>
             <td>+1.6%</td>   
         </tr>
         <tr>
-            <td colspan="3">Die Portfolio Rendite wird netto nach Abzug von Verwaltungs- und Depotgebühren angegeben.</td>
+            <td style="border-bottom: none; font-size: 12pt; color: #676767" colspan="3">
+Die historische Rendite der Anlagemodule bietet einen Anhaltspunkt bezüglich der Wertentwicklung und ist und wird unabhängig von der erwarteten Portfolio Rendite angegeben.</td>
         </tr>
         <tr>
-            <td style="height:50px" colspan="3"></td>
+            <td style="height: 20px; border-bottom: none;" colspan="3"></td>
         </tr>
       </table>
+        
     <table class="table3">
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Points</th>
+          <th colspan="3">Portfolioüberwachung</th>
+        </tr>
+        <tr style="font-style: italic; text-align: center; border-bottom: 2px solid #ddd">
+          <td>Anlageklasse</td>
+          <td>Währung</td>
         </tr>
         <tr>
-          <td>Jill</td>
-          <td>Smith</td>
-          <td>50</td>
+            <td style="background-color: red;">
+<!--              <canvas id="myChart" width="100px" height="100px" style="display: block;"></canvas>-->
+            </td>
+          <td>
+<!--              <canvas id="myChart1" width="100px" height="100px" style="display: block;"></canvas>-->
+            </td>
         </tr>
         <tr>
-          <td>Eve</td>
-          <td>Jackson</td>
-          <td>94</td>
-        </tr>
-        <tr>
-          <td>Adam</td>
-          <td>Johnson</td>
-          <td>67</td>
+            <td colspan="2">Die Portfolio-Struktur wird gegenüber
+Anlageklassen-Bandbreiten überprüft.<br><br>
+Die Tracking-Error Erwartung des Portfolios gegenüber dem Benchmark wird berechnet und gegenüber definierten Bandbreiten überprüft<br><br>
+Die Diversifikation des Portfolios wird mittels Emittenten-Konzentration und Klumpen- Allokationen berechnet und gegenüber definierten Bandbreiten überprüft.</td>
         </tr>
       </table>
     </div>
-    
-    <header style = "clear:left">
-        <p> Risiko </p>
-    </header>
-    <div>
-        <table class="table2">
-        <tr>
-          <th colspan="3">Wertentwicklung</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td>YTD 2019 </td>
-            <td>2018</td>
-        </tr>
-        <tr>
-          <td>Portfolio Rendite</td>
-          <td>+3.7%</td>
-          <td>n.a.</td>
-        </tr>
-            
-        <tr>
-            <td colspan="3">Die Portfolio Rendite wird netto nach Abzug von Verwaltungs- und Depotgebühren angegeben.</td>
-        </tr>
-        <tr>
-            <td colspan="3">YTD (Year-to-date) bezeichnet den Zeitraum seit Beginn des Jahres bis zum aktuellen Zeitpunkt.</td>
-        </tr>
-        <tr>
-            <td>Historische Rendite der Anlagemodule</td>
-            <td>YTD 2019 </td>
-            <td>2018</td>   
-        </tr>
-      </table>
-        <table class="table3">
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Points</th>
-            </tr>
-            <tr>
-              <td>Jill</td>
-              <td>Smith</td>
-              <td>50</td>
-            </tr>
-            <tr>
-              <td>Eve</td>
-              <td>Jackson</td>
-              <td>94</td>
-            </tr>
-            <tr>
-              <td>Adam</td>
-              <td>Johnson</td>
-              <td>67</td>
-            </tr>
-          </table>
-        </div>
     
     
     
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <div>
-        <canvas id="myChart" width="100px" height="100px"></canvas>
-    </div>
 
 <script>
     
     var ctx = document.getElementById('myChart');
+    var ctx1 = document.getElementById('myChart1');
     
     let data =  {
+        datasets: [{
+            data: [10, 20, 30, 5]
+        }],
+
+        // These labels appear in the legend and in the tooltips when hovering different arcs
+        labels: [
+            'Red',
+            'Yellow',
+            'Blue'
+        ]
+    };
+    
+    let data1 =  {
         datasets: [{
             data: [10, 20, 30]
         }],
@@ -307,19 +417,46 @@
     };
     
     let options = {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
+        legend: {
+            position: 'bottom',
+            display: true,
+        },
+        tooltips: false,
+        responsive: false,
+        elements: {
+            arc: {
+                backgroundColor: ['#C07155','#4C3C2F', '#AEB0B3', '#A1CCE4'],
+                hoverBackgroundColor: 'Green'
+            }
+        }
+    }
+    
+    let options1 = {
+        legend: {
+            position: 'bottom',
+            display: true,
+            boxWidth: 20,
+        },
+        responsive: false,
+        tooltips: false,
+        elements: {
+            arc: {
+                backgroundColor: ['#39588A','#6C87B3', '#AFBCD5'], //rgba(255, 99, 132, 0.2)
+                hoverBackgroundColor: 'red'
+            }
         }
     }
     
     var myDoughnutChart = new Chart(ctx, {
         type: 'doughnut',
         data: data,
-        options: null
+        options: options
+    });
+    
+    var myDoughnutChart1 = new Chart(ctx1, {
+        type: 'doughnut',
+        data: data1,
+        options: options1
     });
 </script>    
 
