@@ -126,6 +126,31 @@
             padding-bottom: 10px;
         }
         
+        .table4 {
+            border-collapse: collapse;
+            border-top: 3px solid black;
+            float: right; 
+            table-layout: fixed;
+            width: 28%;
+        }
+        
+        .table4 td {
+            border-bottom: none;
+            font-size: 12pt;
+            text-align: center;
+            padding-bottom: 20px;
+            width: 25% ;
+        }
+        
+        .table4 th {
+            padding-top: 5px;
+            font-size: 25px;
+            text-align: left;
+            font-style: normal; 
+            font-weight: normal; 
+            padding-bottom: 20px;
+        }
+        
         .dot {
             border-radius: 50%;
             width: 10px;
@@ -140,6 +165,92 @@
             padding-left: 30px;
         }
         
+        .circle1 {
+            margin: auto;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #E0AE29;
+            line-height: 70px;
+            text-align: center;
+            border: 5px solid #E0AE29;
+            vertical-align: center;
+        }
+        
+        .circle2 {
+            margin: auto;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #759730;
+            line-height: 70px;
+            text-align: center;
+            border: 5px solid #759730;
+        }
+        
+        .table5 {
+            border-collapse: collapse;
+            border-top: 3px solid black;
+        }
+        
+        .table5 td {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid black;
+            font-size: 11pt;
+        }
+        
+        .table5 th {
+            padding-top: 5px;
+            font-size: 25px;
+            text-align: left;
+            font-style: normal; 
+            font-weight: normal; 
+        }
+        
+        .table5 td:nth-child(2) {
+            text-align: right;
+            padding-right: 30px;
+            width: 15%;
+        }
+        
+        .table5 td:nth-child(4) {
+            text-align: right;
+            width: 15%;
+        }
+        
+        .table5 td:nth-child(1) {
+            width: 35%;
+        }
+        
+        .table5 td:nth-child(3) {
+            width: 35%;
+            text-align: left;
+        }
+        
+        .table5 tr:nth-child(3) {
+            background: #EBF5FA;
+        }
+        .table5 tr:nth-child(5) {
+            background: #DFD4CB;
+        }
+        .table5 tr:nth-child(12) {
+            background: #DFD4CB;
+        }
+        .table5 tr:nth-child(15) {
+            background: #F0DFD8;
+        }
+        .table5 tr:nth-child(17) {
+            background: #F0DFD8;
+        }
+        .table5 tr:nth-child(19) {
+            background: #F0DFD8;
+        }
+        .table5 tr:nth-child(21) {
+            background: #E4E2DC;
+        }
     </style>
 </head>
 <body>
@@ -280,7 +391,7 @@ Die historische Rendite der Anlagemodule bietet einen Anhaltspunkt bezüglich d
     
    
     <div>
-       <table class="table2" style="border-top: none;">
+       <table class="table2" style="border-top: none; border-bottom: none;">
         <tr>
           <th colspan="3" style= "padding-top: 15px;">Risiko</th>
         </tr>
@@ -356,32 +467,188 @@ Die historische Rendite der Anlagemodule bietet einen Anhaltspunkt bezüglich d
         </tr>
       </table>
         
-    <table class="table3">
+    <table class="table4">
         <tr>
           <th colspan="3">Portfolioüberwachung</th>
         </tr>
-        <tr style="font-style: italic; text-align: center; border-bottom: 2px solid #ddd">
-          <td>Anlageklasse</td>
-          <td>Währung</td>
+        <tr>
+            <td>Struktur</td>
+            <td>Risiko</td>
+            <td>Diversifikation</td>
+        </tr>
+        <tr style="padding-bottom: 50px">
+            <td>
+                <div class="circle1">!</div>
+            </td>
+            <td>
+                <div class="circle2">OK</div>
+            </td>
+            <td>
+                <div class="circle2">OK</div>
+            </td>
         </tr>
         <tr>
-            <td style="background-color: red;">
-<!--              <canvas id="myChart" width="100px" height="100px" style="display: block;"></canvas>-->
-            </td>
-          <td>
-<!--              <canvas id="myChart1" width="100px" height="100px" style="display: block;"></canvas>-->
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">Die Portfolio-Struktur wird gegenüber
-Anlageklassen-Bandbreiten überprüft.<br><br>
-Die Tracking-Error Erwartung des Portfolios gegenüber dem Benchmark wird berechnet und gegenüber definierten Bandbreiten überprüft<br><br>
-Die Diversifikation des Portfolios wird mittels Emittenten-Konzentration und Klumpen- Allokationen berechnet und gegenüber definierten Bandbreiten überprüft.</td>
+            <td colspan="3" style="text-align: left; font-size: 12pt">Die Portfolio-Struktur wird gegenüber
+Anlageklassen-Bandbreiten überprüft.<br><br>Die Tracking-Error Erwartung des Portfolios gegenüber dem Benchmark wird berechnet und gegenüber definierten Bandbreiten überprüft<br><br>Die Diversifikation des Portfolios wird mittels Emittenten-Konzentration und Klumpen- Allokationen berechnet und gegenüber definierten Bandbreiten überprüft.</td>
         </tr>
       </table>
     </div>
+
+    
+    <header style = "font-size: 30pt; font-weight: normal; clear: left; padding-top: 100px;">
+        <p> Ihr Portfolio </p>
+    </header>
     
     
+     <table class="table5">
+        <tr>
+          <th colspan="4">Ihre Anlageübersicht</th>
+        </tr>
+        <tr style="font-style: italic;">
+            <td style="border-bottom: 2px solid #ddd;font-weight: normal;font-size: 10pt;">Anlagemodul(1)</td>
+            <td style="border-bottom: 2px solid #ddd;font-weight: normal;font-size: 10pt;">Gewichtung (2)</td>
+            <td style="border-bottom: 2px solid #ddd;font-weight: normal;font-size: 10pt;">Anlageinstrument(3)</td>
+            <td style="border-bottom: 2px solid #ddd;font-weight: normal;font-size: 10pt;">Gewichtung (4)</td>
+        </tr>
+       <tr>
+            <td>
+                <div>
+                <div class="dot" style="background: #A1CCE4"></div>
+                <div class="dotText">Liquidität</div>
+                </div>
+            </td>
+            <td>2.0%</td>
+           <td></td>
+           <td></td>
+        </tr>
+         <tr>
+             <td></td>
+             <td></td>
+            <td>Liquidität CHF</td>
+            <td style="text-align: right">2.0%</td>
+        </tr>
+         <tr>
+            <td><div class="dot" style="background: #4C3C2F"></div><div class="dotText">Globale Anleihen</div></td>
+            <td>24.0%</td>
+            <td colspan="2"></td>   
+        </tr>
+         <tr>
+            <td></td>
+           <td></td>
+            <td>PIMCO GIS Global Bond I-USD-acc̈t</td>
+            <td>7.2%</td>
+        </tr>
+         <tr>
+            <td></td>
+           <td></td>
+            <td>DCI Enhanced -C- CHF</td>
+            <td>4.8%</td>
+        </tr>
+         <tr>
+             <td></td>
+           <td></td>
+            <td>Fidelity USD Bond Fund Y-CHFh-acc</td>
+            <td>4.6%</td>
+        </tr>
+         <tr>
+             <td></td>
+           <td></td>
+            <td>BGF Euro Bond I2-CHFh-cap̈t</td>
+            <td>2.6%</td>
+        </tr>
+         <tr>
+             <td></td>
+           <td></td>
+            <td>Ashmore Emerging Markets Debt Z-CHF-acc̈t</td>
+            <td>2.4%</td>
+        </tr>
+         <tr>
+            <td></td>
+           <td></td>
+            <td>Muzinich Global Tact Credit S-CHFh-acc</td>
+            <td>2.4%</td>
+        </tr>
+        
+        <tr>
+            <td><div class="dot" style="background: #4C3C2F"></div><div class="dotText">Grüne Anleihen</div></td>
+            <td>5.0%</td>
+            <td colspan="2"></td>  
+        </tr>
+         <tr>
+             <td></td>
+           <td></td>
+            <td>BlackRock iShares GreenBond D CHFh acc</td>
+            <td>3.5%</td>
+        </tr>
+         <tr>
+             <td></td>
+           <td></td>
+            <td>Amundi Green BondsSICAV I-C-CHF</td>
+            <td>1.5%</td>
+        </tr>
+        <tr>
+            <td><div class="dot" style="background: #C07155"></div><div class="dotText">Steueroptimierte Schweizer Aktien</div></td>
+            <td>32%</td>
+            <td colspan="2"></td> 
+        </tr>
+         <tr>
+             <td></td>
+           <td></td>
+            <td>VVA - EQ Schweiz</td>
+            <td>32%</td>
+        </tr>
+        <tr>
+            <td><div class="dot" style="background: #C07155"></div><div class="dotText">Globale Einzelaktien</div></td>
+            <td>12%</td>
+            <td colspan="2"></td>   
+        </tr>
+         <tr>
+             <td></td>
+           <td></td>
+            <td>No Instrument</td>
+            <td>12%</td>
+        </tr>
+        <tr>
+            <td><div class="dot" style="background: #C07155"></div><div class="dotText">Passive Währungsabgesicherte Globale Aktien</div></td>
+            <td>21%</td>
+            <td colspan="2"></td>
+        </tr>
+         <tr>
+             <td></td>
+           <td></td>
+            <td>UBS MSCI ACWI SF ETF CHFh-A-Acc</td>
+            <td>21%</td>
+        </tr>
+        <tr>
+            <td><div class="dot" style="background: #AEB0B3"></div><div class="dotText">Rohstoffe</div></td>
+            <td>4.0%</td>
+            <td colspan="2"></td>   
+        </tr>
+         <tr>
+             <td></td>
+           <td></td>
+            <td>UBS ETC on CMCI Index (CHF hdg)</td>
+            <td>4.0%</td>
+        </tr>
+         <tr>
+             <td style="border-bottom: none;">Total</td>
+             <td style="border-bottom: none;">100.0%</td>
+            <td style="border-bottom: none;"></td>
+            <td style="border-bottom: none; text-align: right">100%</td>
+        </tr>
+        <tr>
+            <td style="border-bottom: none; font-size: 12pt; color: #676767" colspan="3">
+                <br><br>
+                
+(1) Die Auswahl der Anlagemodule wird innerhalb eines zulässigen Bereiches durch den Kunden definiert.<br><br>
+(2) Die Gewichtung der Anlagemodule wird innerhalb eines zulässigen Bereiches durch den Kunden definiert und entspricht der Definition bei Vertragsabschluss. Die aktuelle Gewichtung im Kundenportfolio kann von dieser Gewichtung aufgrund von Marktbewegungen abweichen.<br><br>
+(3) Die Auswahl sowie die Gewichtung der Anlageinstrumente innerhalb der Anlagemodule liegt in der Diskretion von UBS und kann jederzeit und ohne Ankündigung verändert werden.<br><br>
+(4) Die Gewichtung der Anlageinstrumente ist auf eine Nachkommastelle gerundet und kann im Kundenportfolio von diesem Wert aufgrund von Marktbewegungen abweichen.<br><br></td>
+        </tr>
+        <tr>
+            <td style="height: 20px; border-bottom: none;" colspan="3"></td>
+        </tr>
+      </table>
     
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
