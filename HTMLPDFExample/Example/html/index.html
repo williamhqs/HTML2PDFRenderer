@@ -2,8 +2,7 @@
 <html>
 <head id="app" data-template-set="html5-reset">
 	<meta charset="utf-8">
-	<meta name="author" content="Aleksandar Vacić, Radiant Tap">
-	<meta name="Copyright" content="Radiant Tap 2013. All Rights Reserved.">
+	<meta name="Copyright" content="UBS">
 
 	<!--  Mobile Viewport Fix
 	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
@@ -12,10 +11,6 @@
 	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-<!--	<link rel="stylesheet" href="order.css">-->
-    
-    
 
 	<script type="text/javascript" charset="utf-8" src="jquery.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -29,12 +24,20 @@
     </script>
 
     <style>
+        
+        
         body {
             background-color: white; 
             padding: 2%;
             font-family:"Frutiger 45 Light", sans-serif;
             font-style: normal; 
-            font-weight: normal; 
+            font-weight: normal;
+            width: 100%;
+/*            DINA4 size*/
+            height:297mm; 
+            width:210mm; 
+            margin-left:auto; 
+            margin-right:auto;
         }
         
         .p1 {
@@ -694,6 +697,11 @@ Anlageklassen-Bandbreiten überprüft.<br><br>Die Tracking-Error Erwartung des
             arc: {
                 backgroundColor: ['#C07155','#4C3C2F', '#AEB0B3', '#A1CCE4'],
                 hoverBackgroundColor: 'Green'
+            }
+        },
+        onComplete: { 
+            function() {
+              //display data here
             }
         }
     }
