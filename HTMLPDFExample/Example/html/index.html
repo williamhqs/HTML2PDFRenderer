@@ -81,7 +81,7 @@
             border-collapse: collapse;
             border-top: 3px solid black;
             border-bottom: 3px solid black;
-            width: 70%; 
+            width: 70%;
             float: left;
         }
         
@@ -112,6 +112,7 @@
             border-collapse: collapse;
             border-top: 3px solid black;
             float: right; 
+            table-layout: fixed;
             width: 28%;
         }
         
@@ -147,7 +148,7 @@
         
         .table4 th {
             padding-top: 5px;
-            font-size: 25px;
+            font-size: 23px;
             text-align: left;
             font-style: normal; 
             font-weight: normal; 
@@ -170,12 +171,12 @@
         
         .circle1 {
             margin: auto;
-            width: 70px;
-            height: 70px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             font-size: 20px;
             color: #E0AE29;
-            line-height: 70px;
+            line-height: 50px;
             text-align: center;
             border: 5px solid #E0AE29;
             vertical-align: center;
@@ -183,12 +184,12 @@
         
         .circle2 {
             margin: auto;
-            width: 70px;
-            height: 70px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             font-size: 20px;
             color: #759730;
-            line-height: 70px;
+            line-height: 50px;
             text-align: center;
             border: 5px solid #759730;
         }
@@ -253,6 +254,9 @@
         }
         .table5 tr:nth-child(21) {
             background: #E4E2DC;
+        }
+        .table2Andtable3 {
+            background: red;
         }
     </style>
 </head>
@@ -372,17 +376,18 @@ Die historische Rendite der Anlagemodule bietet einen Anhaltspunkt bezüglich d
         
     <table class="table3">
         <tr>
-          <th colspan="3">Portfolio-Struktur</th>
+          <th colspan="2">Portfolio-Struktur</th>
         </tr>
         <tr style="font-style: italic; text-align: center; border-bottom: 2px solid #ddd">
           <td>Anlageklasse</td>
           <td>Währung</td>
         </tr>
         <tr>
-            
             <td>
-                <canvas id="myChart" width="150px" height="150px" style="">
+            <div class="chart-container" style="position: relative;">
+                <canvas id="myChart" width="150px" height="150px">
                 </canvas>
+            </div>
             </td>
           <td><canvas id="myChart1" width="150px" height="150px" style=""></canvas></td>
         </tr>
@@ -703,6 +708,14 @@ Anlageklassen-Bandbreiten überprüft.<br><br>Die Tracking-Error Erwartung des
             function() {
               //display data here
             }
+        },
+        layout: {
+            padding: {
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0
+            }
         }
     }
     
@@ -718,6 +731,14 @@ Anlageklassen-Bandbreiten überprüft.<br><br>Die Tracking-Error Erwartung des
             arc: {
                 backgroundColor: ['#39588A','#6C87B3', '#AFBCD5'], //rgba(255, 99, 132, 0.2)
                 hoverBackgroundColor: 'red'
+            }
+        },
+        layout: {
+            padding: {
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0
             }
         }
     }
